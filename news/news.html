@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/grid.css">
+    <link rel="stylesheet" href="../assets/rscss/normalize.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <title></title>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <nav class="header__navbar display-flex">
+                <div class="header__navbar-logo-brand c-2">
+                    <a href="../index.html" class="header__navbar-logo-brand-img">
+                        <img src="https://jollibee.com.vn/images/LogoJB_New-02.png" alt="">
+                    </a>
+                </div>
+                <nav class="header__navbar-menu c-8 display-flex">
+                    <div class="navbar-menu__assist">
+                        <a
+                         href="#" class="navbar-menu__assist-login-btn js-login">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                        <span class="navbar-menu__assist-text-login js-login"> Đăng Ký / Đăng Nhập </span>
+                        <span class="navbar-menu__assist-lang">
+                            <a href="" class="assist-lang-item assist-lang-item--active">VN</a>
+                            <a href="" class="assist-lang-item">ENG</a>
+                        </span>
+                    </div>
+                    <ul class="header__navbar-menu-list ">
+                        <li class="header__navbar-menu-item"><a href="../index.html" class="header__navbar-menu-item-link">TRANG CHỦ</a></li>
+                        <li class="header__navbar-menu-item"><a href="../info.html" class="header__navbar-menu-item-link">VỀ JOLLIBEE</a></li>
+                        <li class="header__navbar-menu-item header__navbar-menu-item-special"><a href="../menu/menu.html" class="header__navbar-menu-item-link">THỰC ĐƠN</a> 
+                            <div class="header__menu-list">
+                                <ul class="header__menu-list-item">
+                                    <li class="header__menu-item">
+                                        <a href="../menu/monngon.html" class="header__menu-item-link">
+                                            <img src="https://jollibee.com.vn/upload/files/menu/mon-moi-mon-ngon.png" alt="" class="header__menu-item-img">
+                                            <h5 href="" class="">Combo </h5>
+                                        </a>                                        
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="../menu/menu.html" class="header__menu-item-link">
+                                            <img src="https://jollibee.com.vn/upload/files/menu/ga-gion-vui-ve.png" alt="" class="header__menu-item-img">
+                                            <h5 href="" class="">Gà Giòn Vui Vẻ </h5>
+                                        </a>                                        
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="../menu/gasotcay.html" class="header__menu-item-link">
+                                            <img src="https://jollibee.com.vn/upload/files/menu/ga-sot-cay.png" alt="" class="header__menu-item-img">
+                                            <h5 href="" class="">Gà Sốt Cay </h5>
+                                        </a>                                        
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="../menu/miysotbobam.html" class="header__menu-item-link">
+                                            <img src="https://jollibee.com.vn/upload/files/menu/mi-y.png" alt="" class="header__menu-item-img">
+                                            <h5 href="" class="">Mì Ý Sốt Bò Bằm </h5>
+                                        </a>                                        
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="../menu/burgervacom.html" class="header__menu-item-link">
+                                            <img src="https://jollibee.com.vn/upload/files/menu/burger-sandwich.png" alt="" class="header__menu-item-img">
+                                            <h5 href="" class="">Burger & Cơm </h5>
+                                        </a>                                        
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="../menu/phananphu.html" class="header__menu-item-link">
+                                            <img src="https://jollibee.com.vn/upload/files/menu/phan-an-phu.png" alt="" class="header__menu-item-img">
+                                            <h5 href="" class="">Phần Ăn Phụ </h5>
+                                        </a>                                        
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="../menu/trangmieng.html" class="header__menu-item-link">
+                                            <img src="https://jollibee.com.vn/upload/files/menu/mon-trang-mieng.png" alt="" class="header__menu-item-img">
+                                            <h5 href="" class="">Món Tráng Miệng </h5>
+                                        </a>                                        
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header__navbar-menu-item"><a href="../promotion/promotion.html" class="header__navbar-menu-item-link">KHUYẾN MÃI</a></li>
+                        <li class="header__navbar-menu-item"><a href="../service/service.html" class="header__navbar-menu-item-link">DỊCH VỤ</a></li>
+                        <li class="header__navbar-menu-item active"><a href="../news/news.html" class="header__navbar-menu-item-link">TIN TỨC</a></li>
+                        <li class="header__navbar-menu-item"><a href="#" class="header__navbar-menu-item-link">CỬA HÀNG</a></li>
+                        <li class="header__navbar-menu-item"><a href="#" class="header__navbar-menu-item-link">LIÊN HỆ</a></li>
+                        <li class="header__navbar-menu-item"><a href="#" class="header__navbar-menu-item-link">TUYỂN DỤNG</a></li>
+                    </ul>
+                </nav>
+                <div class="header__navbar-logo-phone c-2">
+                    <a href="tel:0397230299" class="header__navbar-logo-phone-responsive">
+                        <img src="https://jollibee.com.vn/images/home/delivery.png" alt="" class="header__navbar-logo-phone-responsive-img">
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="banner-service">
+            <img src="../assets/img/service/news.jpg" alt="" class="banner-service-img">
+            <div class="banner-service-circle">
+                <div class="banner-service-circle-wrap">
+                    <h1>TIN TỨC</h1>
+                    <img src="../assets/img/service/popline.svg" alt="">
+                    <p>TẬN HƯỞNG NHỮNG KHOẢNH KHẮC TRỌN VẸN CÙNG JOLLIBEE</p>
+                    <span class="service__scroll-down">
+                        <a href="#scroll-down"><i class="fa-solid fa-angles-down"></i></a>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+        <div class="service-container">
+            <div id="scroll-down" class="news-entry odd active">
+                <a href="#" class="promotion-item c-4">
+                    <figure>
+                        <img src="../assets/img/news/1.jpg" alt="NGON GIÒN RỤM, NGON XOẮN LƯỠI cùng COMBO 69K">
+                    </figure>
+                    <h3>Jollibee tham vọng trở thành thương hiệu fast food được yêu thích nhất Việt Nam</h3>
+                    <p>Tính đến tháng 12/2021, Jollibee đã có 149 cửa hàng trong hệ thống phủ rộng khắp cả nước, hướng tới mục tiêu sẽ là chuỗi cửa ...</p>
+                </a>
+                <a href="#" class="promotion-item c-4">
+                    <figure>
+                        <img src="../assets/img/news/2.jpg" alt="NGON GIÒN RỤM, NGON XOẮN LƯỠI cùng COMBO 69K">
+                    </figure>
+                    <h3>Jollibee Việt Nam tiếp tục đà tăng trưởng sau giãn cách</h3>
+                    <p>Jollibee Việt Nam chủ động đưa ra các đối sách nhằm cải tiến mô hình kinh doanh, kịp thời thích ứng với các chính sách mới ...</p>
+                </a>
+                <a href="#" class="promotion-item c-4">
+                    <figure>
+                        <img src="../assets/img/news/3.jpg" alt="NGON GIÒN RỤM, NGON XOẮN LƯỠI cùng COMBO 69K">
+                    </figure>
+                    <h3>Khám phá nhà máy đạt chuẩn ISO 22000: 2018 của Jollibee</h3>
+                    <p>Năm nay, Jollibee Việt Nam đưa vào vận hành nhà máy mới tại Long An và nhận được chứng nhận ISO 22000: 2018 về quản lý ...</p>
+                </a>
+            </div>
+            <div class="news-entry odd js-news ">
+                <a href="#" class="promotion-item c-4">
+                    <figure>
+                        <img src="../assets/img/news/4.jpg" alt="NGON GIÒN RỤM, NGON XOẮN LƯỠI cùng COMBO 69K">
+                    </figure>
+                    <h3>Nhà máy mới Jollibee Việt Nam nhận được ISO 22000:2018</h3>
+                    <p>Jollibee Việt Nam đã đưa vào vận hành nhà máy mới với chứng nhận ISO 22000:2018 về quản lý an toàn vệ sinh thực phẩm quốc tế.</p>
+                </a>
+                <a href="#" class="promotion-item c-4">
+                    <figure>
+                        <img src="../assets/img/news/5.jpg" alt="NGON GIÒN RỤM, NGON XOẮN LƯỠI cùng COMBO 69K">
+                    </figure>
+                    <h3>Jollibee tưng bừng chào đón cửa hàng thứ 100 tại Việt Nam</h3>
+                    <p>Đạt được cột mốc cửa hàng thứ 100, Jollibee - chuỗi nhà hàng thức ăn nhanh lớn thứ 3 tại Việt Nam – càng củng cố cam kết lan tỏa niềm vui bất tận đến các gia đình Việt Nam.</p>
+                </a>
+                <a href="#" class="promotion-item c-4">
+                    <figure>
+                        <img src="../assets/img/news/6.jpg" alt="NGON GIÒN RỤM, NGON XOẮN LƯỠI cùng COMBO 69K">
+                    </figure>
+                    <h3>Jollibee – Thấu hiểu để thành công</h3>
+                    <p>Thị trường thức ăn nhanh tại Việt Nam chưa bao giờ “giảm nhiệt” cạnh tranh khi ngày càng có nhiều thương hiệu gia nhập sân chơi với quy mô chuỗi cửa hàng lớn mạnhvà chiến lược kinh doanh liên tục thay đổi. Để thành công, các thương hiệu thức ăn nhanh phải có chiến lược phù hợp và khác biệt</p>
+                </a>
+            </div>  
+            <div class="news-entry odd js-news">
+                <a href="#" class="promotion-item c-4">
+                    <figure>
+                        <img src="../assets/img/news/7.jpg" alt="NGON GIÒN RỤM, NGON XOẮN LƯỠI cùng COMBO 69K">
+                    </figure>
+                    <h3>DẤU ẤN KHÁC BIỆT TẠI BUỔI KHAI TRƯƠNG JOLLIBEE TÔ HIỆU</h3>
+                    <p>Trong buổi lễ khai trương cửa hàng Tô Hiệu, Jollibee đã cho ra mắt “Thùng gà Chickenjoy khổng lồ” với 1.000 miếng Gà Giòn Vui Vẻ dành tặng cho khách hàng tại Thủ đô Hà Nội. Sự kiện đặc biệt này đã ghi dấu ấn đặc biệt trong lòng thực khách Thủ đô về Jollibee - thương hiệu thức ăn nhanh luôn ấp ủ sứ mệnh đem niềm vui và khoảnh khắc ấm áp, gần gũi đến với mọi gia đình Việt.</p>
+                </a>
+                <a href="#" class="promotion-item c-4">
+                    <figure>
+                        <img src="../assets/img/news/8.jpg" alt="NGON GIÒN RỤM, NGON XOẮN LƯỠI cùng COMBO 69K">
+                    </figure>
+                    <h3>CƠM GÀ SÀI GÒN SỐT CAY – ĐÁNH THỨC VỊ GIÁC, THỔI BÙNG CÂU CHUYỆN</h3>
+                    <p>Với ưu đãi ĐẶC BIỆT tháng 1 , bạn sẽ được thưởng thức món Cơm Gà Sài Gòn Sốt cay chỉ với 35,000đ bằng 2 cách thật đơn giản:</p>
+                </a>
+                <a href="#" class="promotion-item c-4">
+                    <figure>
+                        <img src="../assets/img/news/9.jpg" alt="NGON GIÒN RỤM, NGON XOẮN LƯỠI cùng COMBO 69K">
+                    </figure>
+                    <h3>TẶNG SỔ TAY SƠN TÙNG M-TP KÈM CHỮ KÝ KHI MUA GÀ GIÒN VUI VẺ</h3>
+                    <p>Tháng 10 năm nay tại hê thống cửa hàng Jollibee toàn quốc trở nên rộn rã hơn bởi hai anh em Sơn Tùng M-TP và Trọng Khang (bé Tường – phim Tôi thấy hoa vàng trên cỏ xanh).</p>
+                </a>
+            </div>  
+            <a href="#" class="load-btn js-load-btn">
+                <span>Xem thêm</span>
+                <i class="fa-solid fa-angles-down js-load-btn"></i>
+            </a>
+            <div class="transfer-service">
+                <div class="transfer-service-head blur">
+                    <img src="../assets/img/news/transfer-bg.jpg" alt="">
+                    <div class="transfer-service-head-text">
+                        <h1>NHƯỢNG QUYỀN</h1>
+                        <img src="../assets/img/service/popline.svg" alt="">
+                        <p>CHẤT LƯỢNG TẠO NỀN TẢNG VỮNG CHỨC CHO NIỀM TIN NHÀ ĐẦU TƯ</p>
+                    </div>
+                </div>
+                <div class="transfer-service-body" id="accordion">
+                    <ul class="transfer-service-list">
+                        <li class="transfer-service-item active js-add-active-btn">
+                            <a data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" href="#collapseOne" class="transfer-service-item-link">THÔNG TIN NHƯỢNG QUYỀN</a>
+                        </li>
+                        <li class="transfer-service-item js-add-active-btn">
+                            <a data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" href="#collapseTwo" class="transfer-service-item-link">TIN TỨC NHƯỢNG QUYỀN</a>
+                        </li>
+                        <li class="transfer-service-item js-add-active-btn">
+                            <a data-toggle="collapse" data-parent="#accordion" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" href="#collapseThree" class="transfer-service-item-link">ĐĂNG KÍ NHƯỢNG QUYỀN</a>
+                        </li>
+                    </ul>
+                    <div class="transfer-service-content-item collapse in" id="collapseOne"  >
+                        <div class="content-pane active">
+                            <div class="content-data">
+                                <div class="transfer-service-content-item-img">
+                                    <img src="../assets/img/news/franchise-left.jpg" alt="">
+                                </div>
+                                <div class="transfer-service-content-item-text">
+                                    <p>
+                                        Hiện tại tập đoàn Jollibee - Phillipines là tập đoàn kinh doanh thức ăn nhanh lớn nhất tại khu vực Châu Á với hơn 30 năm kinh nghiệm – sở hữu 12 thương hiệu với gần 3000 cửa hàng trên toàn cầu, trong đó chỉ tính riêng số lượng cửa hàng Jollibee đã lên đến hơn 900 cửa hàng trên toàn cầu.
+                                    </p>
+                                    <p>
+                                        Hiện nay hệ thống cửa hàng thức ăn nhanh Jollibee đã có hơn 80 cửa hàng trải dài hầu hết các tỉnh thành tại Việt Nam như: Hà Nội, Ninh Bình, Hạ Long, Hải Phòng, Đà Nẵng, Tp.Hồ Chí Minh, Cần Thơ, Nha Trang, Vũng Tàu, Bình Dương, Biên Hòa, Rạch Giá, Long Xuyên, Mỹ Tho, Cà Mau…
+                                    </p>
+                                    <p>
+                                        Với hệ thống quản lý chuyên nghiệp, phục vụ ân cần, món ăn ngon, giá cả hợp lý, chúng tôi vô cùng vui mừng và tự hào giới thiệu đến quý vị mô hình kinh doanh nhượng quyền độc đáo và hấp dẫn. Hiện nay, chúng tôi đang tìm kiếm đối tác Nhượng quyền thương hiệu quan tâm đến kinh doanh hệ thống nhà hàng tiêu chuẩn quốc tế.
+                                    </p>
+                                    <p>
+                                        Các đối tác đầu tư quan tâm xin vui lòng liên hệ qua số tổng đài 1900-1533 để được tư vấn và hỗ trợ chi tiết hơn.
+                                    </p>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="transfer-service-content-item collapse" id="collapseTwo" >
+                        <div  class="content-pane">
+                            <div class="content-data">
+                                <div class="transfer-service-content-item-img">
+                                    <img src="../assets/img/news/franchise-left.jpg" alt="">
+                                </div>
+                                <div class="transfer-service-content-item-text">
+                                    <p>
+                                        Hiện tại tập đoàn Jollibee - Phillipines là tập đoàn kinh doanh thức ăn nhanh lớn nhất tại khu vực Châu Á với hơn 30 năm kinh nghiệm – sở hữu 12 thương hiệu với gần 3000 cửa hàng trên toàn cầu, trong đó chỉ tính riêng số lượng cửa hàng Jollibee đã lên đến hơn 900 cửa hàng trên toàn cầu.
+                                    </p>
+                                    <p>
+                                        Hiện nay hệ thống cửa hàng thức ăn nhanh Jollibee đã có hơn 80 cửa hàng trải dài hầu hết các tỉnh thành tại Việt Nam như: Hà Nội, Ninh Bình, Hạ Long, Hải Phòng, Đà Nẵng, Tp.Hồ Chí Minh, Cần Thơ, Nha Trang, Vũng Tàu, Bình Dương, Biên Hòa, Rạch Giá, Long Xuyên, Mỹ Tho, Cà Mau…
+                                    </p>
+                                    <p>
+                                        Với hệ thống quản lý chuyên nghiệp, phục vụ ân cần, món ăn ngon, giá cả hợp lý, chúng tôi vô cùng vui mừng và tự hào giới thiệu đến quý vị mô hình kinh doanh nhượng quyền độc đáo và hấp dẫn. Hiện nay, chúng tôi đang tìm kiếm đối tác Nhượng quyền thương hiệu quan tâm đến kinh doanh hệ thống nhà hàng tiêu chuẩn quốc tế.
+                                    </p>
+                                    <p>
+                                        Các đối tác đầu tư quan tâm xin vui lòng liên hệ qua số tổng đài 1900-1533 để được tư vấn và hỗ trợ chi tiết hơn.
+                                    </p>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="transfer-service-content-item collapse" id="collapseThree" >
+                        <div class="content-pane">
+                            <div class="content-data">
+                                <div class="transfer-service-content-item-img">
+                                    <img src="../assets/img/news/franchise-left.jpg" alt="">
+                                </div>
+                                <div class="transfer-service-content-item-text">
+                                    <p>
+                                        Để đăng ký Nhượng quyền, quý Ông/Bà tải mẫu bên dưới, điền đầy đủ các thông tin và gửi về địa chỉ email: nhuongquyen.vietnam@jollibee.com.vn
+                                    </p>
+                                    <p>
+                                        Mẫu đăng ký Nhượng quyền: 
+                                        <a download="" href="../assets/img/news/Form-dang-ky-tham-gia-nhuong-quyen-Jollibee_08102015.doc">
+                                            Register-Form 
+                                        </a>
+                                    </p>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+               
+
+        <script>
+            var addActiveBtns = document.getElementsByClassName('js-add-active-btn');
+            var i;
+            for (i= 0; i<addActiveBtns.length; i++) {
+                addActiveBtns[i].addEventListener('click',function() {
+                    this.classList.toggle('active');
+                    if 
+                });
+            }
+        </script>
+
+
+
+        <script>
+            const loadBtns = document.querySelectorAll('.js-load-btn')
+            const news = document.querySelectorAll('.js-news')
+
+            
+            
+            function showNews() {
+                for (const btnNew of news) {
+                    btnNew.classList.add('active')
+                    btnNew.classList.remove('js-news')
+                }
+            }
+            
+
+            for (const loadBtn of loadBtns) {
+                loadBtn.addEventListener('click',showNews)
+            }
+        </script>
+        
+
+        <div class="modal-login js-modal-login">
+            <div class="modal-login-container js-modal-container">
+                <header class="modal-login-header">
+                    <div class="modal-login-header-logo">
+                        <img src="../assets/img/logo/logo.png" alt="">
+                    </div>
+                    <h3>ĐĂNG NHẬP</h3>
+                    <input type="email" class="login-user" placeholder="Email">
+                    <input type="password" class="login-password" placeholder="Mật Khẩu">
+                    <p>
+                        <label class="rmb-login">Ghi nhớ đăng nhập
+                            <input type="checkbox" checked="checked">
+                            <span class="rmb-login-checkmark"></span>
+                        </label>
+                    </p>
+                    <div class="modal-login-close js-modal-close">
+                        X
+                    </div>
+                </header>
+                <div class="modal-login-body">
+                    <ul class="modal-login-body-list">
+                        <li class="modal-login-body-item">
+                            <a href="#" class="forgot-password-link">
+                                Quên mật khẩu
+                            </a>
+                        </li>
+                        <li class="modal-login-body-item">
+                            <a href="#" class="login-link">
+                                ĐĂNG NHẬP
+                            </a>
+                        </li>
+                        <li class="modal-login-body-item">
+                            <a href="#" class="login-with-facebook-link">
+                                <i class="fa-brands fa-facebook-f magrin-right5"></i>
+                                ĐĂNG NHẬP BẰNG FACEBOOK
+                            </a>
+                        </li>
+                        <li class="modal-login-body-item">
+                            <a href="#" class="login-with-google-link">
+                                <i class="fa-brands fa-google magrin-right5"></i>
+                                ĐĂNG NHẬP BẰNG GOOGLE
+                            </a>
+                        </li>
+                        <li class="modal-login-body-item">
+                            Bạn chưa có tài khoản? Nhấn 
+                            <a href="#" class="register-link">vào đây</a>
+                            để đăng kí.
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+        <script>
+            const loginBtns = document.querySelectorAll('.js-login')
+            const modalLogin = document.querySelector('.js-modal-login')
+            const modalContainer = document.querySelector('.js-modal-container')
+            const modalClose = document.querySelector('.js-modal-close')
+
+            function showloginForm() {
+                modalLogin.classList.add('open')
+            }
+
+            function hideloginForm() {
+                modalLogin.classList.remove('open')
+            }
+
+            for (const loginBtn of loginBtns) {
+                loginBtn.addEventListener('click',showloginForm)
+            }
+
+            modalClose.addEventListener('click',hideloginForm)
+
+            modalLogin.addEventListener('click',hideloginForm)
+
+            modalContainer.addEventListener('click',function(event) {
+                event.stopImmediatePropagation()
+            })
+        </script>
+
+        <footer class="footer">
+            <div class="footer__wrap">
+                <div class="footer__logo c-3">
+                    <a href="" class="footer__logo-link">
+                        <img src="../assets/img/logo/logo.png" alt="" class="footer__logo-img">
+                    </a>
+                </div>
+                <div class="footer__address c-3">
+                    <p>Địa chỉ: Lầu 5, tòa nhà SCIC, 16 Trương Định, Phường Võ Thị Sáu, Quận 3, Tp. Hồ Chí Minh, Việt Nam</p>
+                    <p>Tổng đài: <a href="tel:19001533">1900-1533</a></p>
+                    <p>Hộp thư góp ý: <a href="mailto:jbvnfeedback@jollibee.com.vn">jbvnfeedback@jollibee.com.vn</a></p>
+                    <p>Gửi phản hồi đến cửa hàng <a href="#"><b>TẠI ĐÂY</b></a></p>
+                    <p>Gửi phản hồi đến Trụ sở chính Jollibee Việt Nam <a href="https://jfcgrp.service-now.com/csm?id=landing_page_general_fb&amp;type=feedback&amp;country=Vietnam&amp;brand=Jollibee"><b>TẠI ĐÂY</b> </a></p>
+                </div>
+                <div class="footer__contact c-3">
+                    <a href="#">
+                        <img src="../assets/img/footer/delivery.png" alt="">
+                    </a>
+                    <ul class="footer__policy-list">
+                        <li class="footer__policy-item">
+                            <a href="" class="footer__policy-item__link">Chính sách quy định chung</a>
+                        </li>
+                        <li class="footer__policy-item">
+                            <a href="" class="footer__policy-item__link">Chính sách hoạt động</a>
+                        </li>
+                        <li class="footer__policy-item">
+                            <a href="" class="footer__policy-item__link">Chính sách bảo mật thông tin</a>
+                        </li>
+                        <li class="footer__policy-item">
+                            <a href="" class="footer__policy-item__link">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__social c-3">
+                        <h3 class="footer__social-heading">HÃY KẾT NỐI VỚi CHÚNG TÔI</h3>
+                        <ul class="footer__social-list">
+                            <li class="footer__social-item">
+                                <a href="" class="footer__social-item__link">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a href="" class="footer__social-item__link">
+                                    <i class="fa-brands fa-google-plus"></i>
+                                </a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

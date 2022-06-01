@@ -1,0 +1,89 @@
+:root{
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:333;
+    --header-height:99px;
+    --container__menu-height:590px;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto',sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.magrin-right5 {
+    margin-right: 5px;
+}
+
+.shadow-bottom {
+    -webkit-box-shadow: 0px 4px 4px 0 rgb(0 0 0 / 30%);
+    box-shadow: 0px 4px 4px 0 rgb(0 0 0 / 30%);
+}
+
+.text-color {
+    color: #CE181F;
+}
+
+.text-color-2 {
+    color: #a8b919;
+}
+
+.text-color-3 {
+    color: #e97c00;
+}
+
+.text-color-4 {
+    color: #5dc6d1;
+}
+
+.service-entry.even {
+    background: #efefef;
+}
+
+.service-entry.odd {
+    z-index: 99999;
+}
+
+.pr20 {
+    padding-right: 20px;
+}
+
+.pr30 {
+    padding-right: 30px;
+}
+
+.pr40 {
+    padding-right: 40px;
+}
+
+.pr50 {
+    padding-right: 50px;
+}
+
+.blur {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}

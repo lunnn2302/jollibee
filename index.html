@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/rscss/normalize.min.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title></title>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <nav class="header__navbar display-flex">
+                <div class="header__navbar-logo-brand c-2">
+                    <a href="./index.html" class="header__navbar-logo-brand-img">
+                        <img src="https://jollibee.com.vn/images/LogoJB_New-02.png" alt="">
+                    </a>
+                </div>
+                <nav class="header__navbar-menu c-8 display-flex">
+                    <div class="navbar-menu__assist">
+                        <a
+                         href="#" class="navbar-menu__assist-login-btn js-login">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                        <span class="navbar-menu__assist-text-login js-login"> Đăng Ký / Đăng Nhập </span>
+                        <span class="navbar-menu__assist-lang">
+                            <a href="" class="assist-lang-item assist-lang-item--active">VN</a>
+                            <a href="" class="assist-lang-item">ENG</a>
+                        </span>
+                    </div>
+                    <ul class="header__navbar-menu-list ">
+                        <li class="header__navbar-menu-item active"><a href="./index.html" class="header__navbar-menu-item-link">TRANG CHỦ</a></li>
+                        <li class="header__navbar-menu-item"><a href="./info.html" class="header__navbar-menu-item-link">VỀ JOLLIBEE</a></li>
+                        <li class="header__navbar-menu-item header__navbar-menu-item-special"><a href="./menu/menu.html" class="header__navbar-menu-item-link">THỰC ĐƠN</a> 
+                            <div class="header__menu-list">
+                                <ul class="header__menu-list-item">
+                                    <li class="header__menu-item">
+                                        <a href="./menu/monngon.html" class="header__menu-item-link">
+                                            <img src="https://jollibee.com.vn/upload/files/menu/mon-moi-mon-ngon.png" alt="" class="header__menu-item-img">
+                                            <h5 href="" class="">Combo </h5>
+                                        </a>                                        
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="./menu/menu.html" class="header__menu-item-link">
+                                            <img src="https://jollibee.com.vn/upload/files/menu/ga-gion-vui-ve.png" alt="" class="header__menu-item-img">
+                                            <h5 href="" class="">Gà Giòn Vui Vẻ </h5>
+                                        </a>                                        
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="./menu/gasotcay.html" class="header__menu-item-link">
+                                            <img src="https://jollibee.com.vn/upload/files/menu/ga-sot-cay.png" alt="" class="header__menu-item-img">
+                                            <h5 href="" class="">Gà Sốt Cay </h5>
+                                        </a>                                        
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="./menu/miysotbobam.html" class="header__menu-item-link">
+                                            <img src="https://jollibee.com.vn/upload/files/menu/mi-y.png" alt="" class="header__menu-item-img">
+                                            <h5 href="" class="">Mì Ý Sốt Bò Bằm </h5>
+                                        </a>                                        
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="./menu/burgervacom.html" class="header__menu-item-link">
+                                            <img src="https://jollibee.com.vn/upload/files/menu/burger-sandwich.png" alt="" class="header__menu-item-img">
+                                            <h5 href="" class="">Burger & Cơm </h5>
+                                        </a>                                        
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="./menu/phananphu.html" class="header__menu-item-link">
+                                            <img src="https://jollibee.com.vn/upload/files/menu/phan-an-phu.png" alt="" class="header__menu-item-img">
+                                            <h5 href="" class="">Phần Ăn Phụ </h5>
+                                        </a>                                        
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="./menu/trangmieng.html" class="header__menu-item-link">
+                                            <img src="https://jollibee.com.vn/upload/files/menu/mon-trang-mieng.png" alt="" class="header__menu-item-img">
+                                            <h5 href="" class="">Món Tráng Miệng </h5>
+                                        </a>                                        
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="header__navbar-menu-item"><a href="./promotion/promotion.html" class="header__navbar-menu-item-link">KHUYẾN MÃI</a></li>
+                        <li class="header__navbar-menu-item"><a href="./service/service.html" class="header__navbar-menu-item-link">DỊCH VỤ</a></li>
+                        <li class="header__navbar-menu-item"><a href="./news/news.html" class="header__navbar-menu-item-link">TIN TỨC</a></li>
+                        <li class="header__navbar-menu-item"><a href="#" class="header__navbar-menu-item-link">CỬA HÀNG</a></li>
+                        <li class="header__navbar-menu-item"><a href="./contact/contact.html" class="header__navbar-menu-item-link">LIÊN HỆ</a></li>
+                        <li class="header__navbar-menu-item"><a href="#" class="header__navbar-menu-item-link">TUYỂN DỤNG</a></li>
+                    </ul>
+                </nav>
+                <div class="header__navbar-logo-phone c-2">
+                    <a href="tel:0397230299" class="header__navbar-logo-phone-responsive">
+                        <img src="https://jollibee.com.vn/images/home/delivery.png" alt="" class="header__navbar-logo-phone-responsive-img">
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <!-- BANNER START -->
+            <div class="container__banner">
+                <!-- IMG SLIDER START -->
+                    <div class="slider">
+                        <div class="slides">
+                            <!-- RADIO BTN START -->
+                            <input type="radio" name="radio-btn" id="radio1">
+                            <input type="radio" name="radio-btn" id="radio2">
+                            <input type="radio" name="radio-btn" id="radio3">
+                            <input type="radio" name="radio-btn" id="radio4">
+                            <!-- RADIO BTN END -->
+
+                            <!-- SLIDE IMAGE START -->
+                            <div class="slide first">
+                                <a href="#" class="slide-link">
+                                    <img src="assets/img/container/slider/slider1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="#" class="slide-link">
+                                    <img src="assets/img/container/slider/slider2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="#" class="slide-link">
+                                    <img src="assets/img/container/slider/slider3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="#" class="slide-link">
+                                    <img src="assets/img/container/slider/slider4.jpg" alt="">
+                                </a>
+                            </div>
+                            <!-- SLIDE IMAGE END -->
+
+                            <!-- AUTOMATIC NAVIGATION START -->
+                            <div class="navigation-auto">
+                                <div class="auto-btn1"></div>
+                                <div class="auto-btn2"></div>
+                                <div class="auto-btn3"></div>
+                                <div class="auto-btn4"></div>
+                            </div>
+                            <!-- AUTOMATIC NAVIGATION END -->
+                        </div>
+                        <!-- MANUAL NAVIGATION START -->
+                        <div class="navigation-manual">
+                            <label for="radio1" class="manual-btn"></label>
+                            <label for="radio2" class="manual-btn"></label>
+                            <label for="radio3" class="manual-btn"></label> 
+                            <label for="radio4" class="manual-btn"></label>
+                        </div>
+                        <!-- MANUAL NAVIGATION END -->
+                    </div>
+                <!-- IMG SLIDER END -->
+
+                        <script type="text/javascript">
+                            var counter = 1;
+                            setInterval(function(){
+                                document.getElementById('radio' + counter).checked = true;
+                                counter++
+                                if (counter > 4) {
+                                    counter = 1;
+                                }
+                            },1500);
+                        </script>
+                <div class="btn-order">
+                    <a href="" class="btn-order-link">- Đặt Hàng</a>
+                </div>        
+            </div>
+            <!-- BANNER END -->
+
+            <!-- MENU START -->
+            <div class="container__menu">
+                <!-- <div class="row"> -->
+
+
+                    <div class="container__menu-text c-3">
+                        <div class="logo-menu">
+                            <img src="assets/img/logo/logo.png" alt="">
+                        </div>
+                        <H3>ĂN GÌ  <BR>   HÔM NAY</H3>
+                        <p>Thực đơn Jollibee đa dạng và phong phú, có rất nhiều sự lựa chọn cho bạn, gia đình và bạn bè.</p>
+                    </div>
+
+
+                    <div class="container__menu-detail c-9">
+                        <div class="container__menu-swiper">
+                            <a href="#" class="container__menu-swiper-link">
+                                <img src="./assets/img/container/menu/gagionvuive.png" alt="" class="container__menu-swiper-img">
+                                <div class="container__menu-swiper-title">
+                                    <img src="./assets/img/container/menu/gagionvuivename.png" alt="" class="container__menu-swiper-name-img">
+                                    <button class="container__menu-swiper-btn">Đặt Hàng</button>
+                                </div>
+                            </a>
+                            <a href="#" class="container__menu-swiper-link">
+                                <img src="./assets/img/container/menu/gasotcay.png" alt="" class="container__menu-swiper-img">
+                                <div class="container__menu-swiper-title">
+                                    <img src="./assets/img/container/menu/gasotcayname.png" alt="" class="container__menu-swiper-name-img">
+                                    <button class="container__menu-swiper-btn">Đặt Hàng</button>
+                                </div>
+                            </a>
+                            <a href="#" class="container__menu-swiper-link">
+                                <img src="./assets/img/container/menu/miysotbobam.png" alt="" class="container__menu-swiper-img">
+                                <div class="container__menu-swiper-title">
+                                    <img src="./assets/img/container/menu/miysotbobamname.png" alt="" class="container__menu-swiper-name-img">
+                                    <button class="container__menu-swiper-btn">Đặt Hàng</button>
+                                </div>
+                            </a>
+                            <a href="#" class="container__menu-swiper-link">
+                                <img src="./assets/img/container/menu/montrangmieng.png" alt="" class="container__menu-swiper-img">
+                                <div class="container__menu-swiper-title">
+                                    <img src="./assets/img/container/menu/montrangmiengname.png" alt="" class="container__menu-swiper-name-img">
+                                    <button class="container__menu-swiper-btn">Đặt Hàng</button>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <!-- </div> -->
+            <!-- MENU END -->
+            <!-- SERVICE START-->
+            <div class="container__service">
+                <div class="container__service-main">
+                    <div class="grid wide">
+                        <div class="container__service-title c-12">
+                            <h3>DỊCH VỤ</h3>
+                            <h4>TẬN HƯỞNG NHỮNG KHOẢNH KHẮC TRỌN VẸN CÙNG JOLLIBEE</h4>
+                        </div>
+                    </div>
+                    <div class="grid wide">
+                        <div class="container__service-entry">
+                            <div class="container__service-entry-item c-4">
+                                <a href="#" class="container__service-entry-link">
+                                    <img src="./assets/img/container/serv/1.png" alt="" class="container__service-entry-img">
+                                </a>
+                                <div class="container__service-entry-body">
+                                    <p class="container__service-entry-title">
+                                        <a href="#">ĐẶT TIỆC SINH NHẬT</a>
+                                    </p>
+                                    <a href="./service/kid-party.html" class="container__service-entry-btn">XEM THÊM</a>
+                                </div>
+                            </div>
+    
+                            <div class="container__service-entry-item c-4">
+                                <a href="#" class="container__service-entry-link">
+                                    <img src="./assets/img/container/serv/2.png" alt="" class="container__service-entry-img">
+                                </a>
+                                <div class="container__service-entry-body">
+                                    <p class="container__service-entry-title">
+                                        <a href="#">JOLLIBEE KID CLUB</a>
+                                    </p>
+                                    <a href="#" class="container__service-entry-btn">XEM THÊM</a>
+                                </div>
+                            </div>
+    
+                            <div class="container__service-entry-item c-4">
+                                <a href="#" class="container__service-entry-link">
+                                    <img src="./assets/img/container/serv/3.png" alt="" class="container__service-entry-img">
+                                </a>
+                                <div class="container__service-entry-body">
+                                    <p class="container__service-entry-title">
+                                        <a href="#">ĐƠN HÀNG LỚN</a>
+                                    </p>
+                                    <a href="#" class="container__service-entry-btn">XEM THÊM</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SERVICE END-->
+
+            <!-- INTRODUCE START -->
+            <div class="container__introduce">
+                <div class="container__introduce-content">
+                    <h3>JOLLIBEE, XIN CHÀO</h3>
+                    <p>Chúng tôi là Jollibee Việt Nam với hơn 100 cửa hàng trên khắp cả nước, chúng tôi mong muốn đem đến niềm vui ẩm thực cho mọi gia đình Việt bằng những món ăn có chất lượng tốt, hương vị tuyệt hảo, dịch vụ chu đáo với một mức giá hợp lý… Hãy đến và thưởng thức nhé!</p>
+                    <a href="#" class="container__introduce-btn">ĐẶT HÀNG</a>
+                </div>
+            </div>
+            <!-- INTRODUCE END -->
+
+            <!-- STORE START -->
+            <!-- <div class="container__store">
+                <div action="" class="container__store-form">
+                    <div class="container__store-form-name">TÌM CỬA HÀNG</div>
+                    <div class="container__store-form-select">
+                        <select class="container__store-form-select-city">
+                            <option value="" disabled="" class="" selected="selected">Chọn tỉnh thành</option>
+                            <option value="1" label="Ha Noi">Ha Noi</option>
+                            <option value="41" label="TP. Ho Chi Minh">TP. Ho Chi Minh</option>
+                            <option value="53" label="An Giang">An Giang</option>
+                            <option value="50" label="Ba Ria - Vung Tau">Ba Ria - Vung Tau</option>
+                            <option value="6" label="Bac Can">Bac Can</option>
+                            <option value="17" label="Bac Giang">Bac Giang</option>
+                            <option value="62" label="Bac Lieu">Bac Lieu</option>
+                            <option value="18" label="Bac Ninh">Bac Ninh</option>
+                            <option value="56" label="Ben Tre">Ben Tre</option>
+                            <option value="35" label="Binh Dinh">Binh Dinh</option>
+                            <option value="46" label="Binh Duong">Binh Duong</option>
+                            <option value="47" label="Binh Phuoc">Binh Phuoc</option>
+                            <option value="38" label="Binh Thuan">Binh Thuan</option>
+                            <option value="63" label="Ca Mau">Ca Mau</option>
+                            <option value="59" label="Can Tho">Can Tho</option>
+                            <option value="4" label="Cao Bang">Cao Bang</option>
+                            <option value="32" label="Da Nang">Da Nang</option>
+                            <option value="44" label="Dac Nong">Dac Nong</option>
+                            <option value="43" label="Dak Lak">Dak Lak</option>
+                          </select>
+                    </div>
+                    <div class="container__store-form-item">TÌM CỬA HÀNG</div>
+                    <div class="container__store-form-btn">
+                        <button type="submit" class="container__store-form-btn-submit">TÌM KIẾM</button>
+                    </div>
+                </div>
+            </div> -->
+            <!-- STORE END -->
+
+            <!-- NEWS START -->
+            <div class="container__news">
+                <h3>TIN TỨC</h3>
+                    <div class="container__news-item c-3">
+                        <a href="#" class="container__news-link">
+                            <img src="./assets/img/container/news/1.jpg" alt="" class="container__news-item-img">
+                        </a>
+                    </div>
+                    <div class="container__news-item c-3">
+                        <a href="#" class="container__news-link">
+                            <img src="./assets/img/container/news/2.jpg" alt="" class="container__news-item-img">
+                        </a>
+                    </div>
+                    <div class="container__news-item c-3">
+                        <a href="#" class="container__news-link">
+                            <img src="./assets/img/container/news/3.jpg" alt="" class="container__news-item-img">
+                        </a>
+                    </div>
+                    <div class="container__news-item c-3">
+                        <a href="#" class="container__news-link">
+                            <img src="./assets/img/container/news/4.jpg" alt="" class="container__news-item-img">
+                        </a>
+                    </div>
+                <a href="./news/news.html" class="container__news-item-btn">XEM THÊM</a>
+            </div>
+            <!-- NEWS END -->
+        </div>
+        
+
+        <div class="modal-login js-modal-login">
+            <div class="modal-login-container js-modal-container">
+                <header class="modal-login-header">
+                    <div class="modal-login-header-logo">
+                        <img src="assets/img/logo/logo.png" alt="">
+                    </div>
+                    <h3>ĐĂNG NHẬP</h3>
+                    <input type="email" class="login-user" placeholder="Email">
+                    <input type="password" class="login-password" placeholder="Mật Khẩu">
+                    <p>
+                        <label class="rmb-login">Ghi nhớ đăng nhập
+                            <input type="checkbox" checked="checked">
+                            <span class="rmb-login-checkmark"></span>
+                        </label>
+                    </p>
+                    <div class="modal-login-close js-modal-close">
+                        X
+                    </div>
+                </header>
+                <div class="modal-login-body">
+                    <ul class="modal-login-body-list">
+                        <li class="modal-login-body-item">
+                            <a href="#" class="forgot-password-link">
+                                Quên mật khẩu
+                            </a>
+                        </li>
+                        <li class="modal-login-body-item">
+                            <a href="#" class="login-link">
+                                ĐĂNG NHẬP
+                            </a>
+                        </li>
+                        <li class="modal-login-body-item">
+                            <a href="#" class="login-with-facebook-link">
+                                <i class="fa-brands fa-facebook-f magrin-right5"></i>
+                                ĐĂNG NHẬP BẰNG FACEBOOK
+                            </a>
+                        </li>
+                        <li class="modal-login-body-item">
+                            <a href="#" class="login-with-google-link">
+                                <i class="fa-brands fa-google magrin-right5"></i>
+                                ĐĂNG NHẬP BẰNG GOOGLE
+                            </a>
+                        </li>
+                        <li class="modal-login-body-item">
+                            Bạn chưa có tài khoản? Nhấn 
+                            <a href="#" class="register-link">vào đây</a>
+                            để đăng kí.
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+        <script>
+            const loginBtns = document.querySelectorAll('.js-login')
+            const modalLogin = document.querySelector('.js-modal-login')
+            const modalContainer = document.querySelector('.js-modal-container')
+            const modalClose = document.querySelector('.js-modal-close')
+
+            function showloginForm() {
+                modalLogin.classList.add('open')
+            }
+
+            function hideloginForm() {
+                modalLogin.classList.remove('open')
+            }
+
+            for (const loginBtn of loginBtns) {
+                loginBtn.addEventListener('click',showloginForm)
+            }
+
+            modalClose.addEventListener('click',hideloginForm)
+
+            modalLogin.addEventListener('click',hideloginForm)
+
+            modalContainer.addEventListener('click',function(event) {
+                event.stopImmediatePropagation()
+            })
+        </script>
+
+        <footer class="footer">
+            <div class="footer__wrap">
+                <div class="footer__logo c-3">
+                    <a href="" class="footer__logo-link">
+                        <img src="./assets/img/logo/logo.png" alt="" class="footer__logo-img">
+                    </a>
+                </div>
+                <div class="footer__address c-3">
+                    <p>Địa chỉ: Lầu 5, tòa nhà SCIC, 16 Trương Định, Phường Võ Thị Sáu, Quận 3, Tp. Hồ Chí Minh, Việt Nam</p>
+                    <p>Tổng đài: <a href="tel:19001533">1900-1533</a></p>
+                    <p>Hộp thư góp ý: <a href="mailto:jbvnfeedback@jollibee.com.vn">jbvnfeedback@jollibee.com.vn</a></p>
+                    <p>Gửi phản hồi đến cửa hàng <a href="#"><b>TẠI ĐÂY</b></a></p>
+                    <p>Gửi phản hồi đến Trụ sở chính Jollibee Việt Nam <a href="https://jfcgrp.service-now.com/csm?id=landing_page_general_fb&amp;type=feedback&amp;country=Vietnam&amp;brand=Jollibee"><b>TẠI ĐÂY</b> </a></p>
+                </div>
+                <div class="footer__contact c-3">
+                    <a href="#">
+                        <img src="./assets/img/footer/delivery.png" alt="">
+                    </a>
+                    <ul class="footer__policy-list">
+                        <li class="footer__policy-item">
+                            <a href="" class="footer__policy-item__link">Chính sách quy định chung</a>
+                        </li>
+                        <li class="footer__policy-item">
+                            <a href="" class="footer__policy-item__link">Chính sách hoạt động</a>
+                        </li>
+                        <li class="footer__policy-item">
+                            <a href="" class="footer__policy-item__link">Chính sách bảo mật thông tin</a>
+                        </li>
+                        <li class="footer__policy-item">
+                            <a href="" class="footer__policy-item__link">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__social c-3">
+                        <h3 class="footer__social-heading">HÃY KẾT NỐI VỚi CHÚNG TÔI</h3>
+                        <ul class="footer__social-list">
+                            <li class="footer__social-item">
+                                <a href="" class="footer__social-item__link">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="footer__social-item">
+                                <a href="" class="footer__social-item__link">
+                                    <i class="fa-brands fa-google-plus"></i>
+                                </a>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
