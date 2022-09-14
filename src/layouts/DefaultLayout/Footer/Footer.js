@@ -9,8 +9,8 @@ const cx = classNames.bind(styles);
 function Footer() {
     return (
         <footer className={cx('wrapper')}>
-            <div className={cx('footer-container', 'flex')}>
-                <div className=" flex flex-end px-16">
+            <div className={cx('footer-container', 'flex flex-row')}>
+                <div className=" flex basis-6/12">
                     <div className={cx('footer-logo')}>
                         <img src={images.logoFooter} alt="logo" />
                     </div>
@@ -48,7 +48,7 @@ function Footer() {
                         </p>
                     </div>
                 </div>
-                <div className=" flex flex-wrap px-16">
+                <div className=" px-16 basis-4/12">
                     <Link to="/delivery">
                         <img className={cx('delivery-logo')} src={images.deliveryBottom} alt="Delivery Logo" />
                     </Link>
@@ -79,9 +79,9 @@ function Footer() {
                         </li>
                     </ul>
                 </div>
-                <div className=" flex flex-wrap px-16">
+                <div className=" basis-3/12">
                     <p className={cx('title')}>Hãy kết nối với chúng tôi</p>
-                    <div className={cx('contact', 'flex')}>
+                    <div className={cx('facebook-btn')}>
                         <Button
                             href="http://www.facebook.com/JollibeeVietnam"
                             primary
@@ -90,7 +90,7 @@ function Footer() {
                             <span>Facebook</span>
                         </Button>
                     </div>
-                    <div className={cx('contact', 'flex')}>
+                    <div className={cx('email-btn')}>
                         <Button
                             href="mailto:jbvnfeedback@jollibee.com.vn"
                             primary
