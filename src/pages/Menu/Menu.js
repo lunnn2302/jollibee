@@ -1,10 +1,12 @@
-import { useEffect } from 'react';
+import Tippy from '@tippyjs/react';
+import MenuList from '~/components/MenuList';
+import classNames from 'classnames/bind';
+import styles from './Menu.module.scss';
+
+const cx = classNames.bind(styles);
 
 function Menu() {
-    useEffect(() => {
-        document.title = 'Món mới món ngon';
-    }, []);
-    return <h1>Menu</h1>;
+    return <div className={cx('wrapper')}></div>;
 }
 
 export default Menu;

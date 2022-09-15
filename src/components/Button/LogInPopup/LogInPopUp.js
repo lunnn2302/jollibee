@@ -8,7 +8,7 @@ import styles from './LogInPopUp.module.scss';
 
 const cx = classNames.bind(styles);
 
-function LogIn({ togglePopup }) {
+function LogInPopUp({ togglePopup }) {
     return (
         <div className={cx('pop-up')}>
             <div className={cx('wrapper')}>
@@ -46,4 +46,4 @@ function LogIn({ togglePopup }) {
     );
 }
 
-export default LogIn;
+export default LogInPopUp;

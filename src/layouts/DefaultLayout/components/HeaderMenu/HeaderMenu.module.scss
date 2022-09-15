@@ -23,6 +23,17 @@
     }
 }
 
+.menu-item-wrap {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin: 0 2px;
+    position: static;
+    border-radius: 10px 10px 0 0;
+    font-family: 'MergeBlack', sans-serif;
+}
+
 .menu-item p {
     display: block;
     color: #fff;

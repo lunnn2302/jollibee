@@ -7,7 +7,14 @@ import Tippy from '@tippyjs/react/headless';
 const cx = classNames.bind(styles);
 
 function HeaderMenu() {
-    const renderResult = () => <MenuList />;
+    const handleRenderMenuList = (attrs) => (
+        <div tabIndex="-1" {...attrs}>
+            <MenuList />
+        </div>
+    );
+
+    const pathName = window.location.pathname.slice(1);
+
     return (
         <>
             <NavLink className={(nav) => cx('menu-item', { active: nav.isActive })} to="/">
@@ -16,11 +23,19 @@ function HeaderMenu() {
             <NavLink className={(nav) => cx('menu-item', { active: nav.isActive })} to="/info">
                 <p>Về Jollibee</p>
             </NavLink>
-            <Tippy interactive render={renderResult} offset={[-250, 0]} placement={'bottom-start'}>
-                <NavLink className={(nav) => cx('menu-item', { active: nav.isActive })} to="/menu">
-                    <p>Thực đơn</p>
-                </NavLink>
-            </Tippy>
+            <div className={cx('menu-item-wrap')}>
+                <Tippy
+                    trigger="mouseenter click"
+                    interactive
+                    render={handleRenderMenuList}
+                    offset={[-250, 0]}
+                    placement={'bottom-start'}
+                >
+                    <NavLink className={(nav) => cx('menu-item', { active: nav.isActive })} to="/menu">
+                        <p>Thực đơn</p>
+                    </NavLink>
+                </Tippy>
+            </div>
             <NavLink className={(nav) => cx('menu-item', { active: nav.isActive })} to="/promotion">
                 <p>Khuyến mãi</p>
             </NavLink>

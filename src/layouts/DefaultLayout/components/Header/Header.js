@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import LogIn from '../LogInPopup';
+import LogInPopUp from '~/components/Button/LogInPopup/';
 
 const cx = classNames.bind(styles);
 
@@ -44,9 +44,9 @@ function Header() {
                 </div>
             </div>
             <div className={cx('header-content')}>
-                <div className={cx('logo')}>
+                <Link to="/" className={cx('logo')}>
                     <img className={(cx('logo-img'), 'logo')} src={images.logo} alt="LogoImg" />
-                </div>
+                </Link>
                 <nav className={cx('header-menu')}>
                     <HeaderMenu />
                 </nav>
@@ -54,7 +54,7 @@ function Header() {
                     <img src={images.delivery} alt="" />
                 </div>
             </div>
-            {isOpen && <LogIn togglePopup={togglePopup} />}
+            {isOpen && <LogInPopUp togglePopup={togglePopup} />}
         </header>
     );
 }
