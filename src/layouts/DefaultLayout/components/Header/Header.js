@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import LogIn from '../LogIn';
+import LogIn from '../LogInPopup';
 
 const cx = classNames.bind(styles);
 

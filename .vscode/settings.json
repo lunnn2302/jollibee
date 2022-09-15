@@ -1,4 +1,6 @@
 {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "markdown.experimental.updateLinksOnFileMove.enabled": "never",
+    "markdown.experimental.updateLinksOnFileMove.enableForDirectories": true
 }

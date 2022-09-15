@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import images from '~/assets/img';
 import Button from '~/components/Button';
-import styles from './LogIn.module.scss';
+import styles from './LogInPopUp.module.scss';
 
 const cx = classNames.bind(styles);
 

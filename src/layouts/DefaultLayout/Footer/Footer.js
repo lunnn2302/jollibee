@@ -94,7 +94,7 @@ function Footer() {
                         <Button
                             href="mailto:jbvnfeedback@jollibee.com.vn"
                             primary
-                            leftIcon={<img src={images.iconMail} />}
+                            leftIcon={<img src={images.iconMail} alt="" />}
                         >
                             <span>E-Mail</span>
                         </Button>
