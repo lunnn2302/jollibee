@@ -1,0 +1,33 @@
+.today-menu {
+    display: flex;
+    background-color: var(--red-primary);
+}
+
+.intro {
+    width: 25%;
+    max-width: 234px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.intro-title {
+    display: block;
+    font-family: 'MergeBlack', sans-serif;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+}
+
+.intro-description {
+    display: block;
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.main-today-menu {
+    display: flex;
+    width: 75%;
+    background-color: var(--white);
+}

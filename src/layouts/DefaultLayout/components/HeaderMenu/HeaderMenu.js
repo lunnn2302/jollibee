@@ -13,7 +13,7 @@ function HeaderMenu() {
         </div>
     );
 
-    const pathName = window.location.pathname.slice(1);
+    // const pathName = window.location.pathname.slice(1);
 
     return (
         <>

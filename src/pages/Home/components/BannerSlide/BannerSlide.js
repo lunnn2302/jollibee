@@ -4,7 +4,6 @@ import 'react-slideshow-image/dist/styles.css';
 import classNames from 'classnames/bind';
 import styles from './BannerSlide.module.scss';
 import bannerSlideImages from '~/assets/img/BannerSlide';
-import Button from '../Button';
 import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
@@ -29,11 +28,11 @@ const indicators = () => <div className="indicator"></div>;
 function BannerSlide() {
     return (
         <div className={cx('wrapper')}>
-            <Slide indicators={indicators} duration={2000} transitionDuration={500} arrows={false}>
+            <Slide canSwipe={false} indicators={indicators} duration={2000} transitionDuration={500} arrows={false}>
                 {slideImages.map((slideImage, index) => (
                     <div key={index}>
                         <div>
-                            <img className={cx('background')} src={slideImage.url} alt={slideImage.caption} />
+                            <img className={cx('slideImage')} src={slideImage.url} alt={slideImage.caption} />
                         </div>
                     </div>
                 ))}

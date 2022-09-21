@@ -1,0 +1,13 @@
+.wrapper {
+    position: sticky;
+    bottom: 0;
+    left: 75%;
+    text-align: center;
+    font-size: 2.2rem;
+    background-color: var(--yel-primary);
+    border-radius: 15px 15px 0 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 280px;
+    max-height: 51px;
+}

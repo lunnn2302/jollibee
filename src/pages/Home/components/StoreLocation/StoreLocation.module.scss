@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: #ed7d22;
+    padding: 51px 46px 44px 46px;
+}
+
+.title {
+    display: flex;
+    width: 25%;
+    font-size: 4rem;
+    line-height: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--white);
+    align-items: center;
+}
+
+.store-location {
+    width: 78%;
+    display: flex;
+}
+
+.filter {
+    margin: 0 12px;
+    padding-left: 10px;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid #9e9e9e;
+    width: 100%;
+    outline: 0;
+    color: #676767;
+}
+
+.submit-btn {
+    width: 130px;
+    cursor: pointer;
+}

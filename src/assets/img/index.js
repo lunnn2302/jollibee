@@ -11,6 +11,7 @@ const images = {
     bocongthuong: require('~/assets/img/bocongthuong.png'),
     deliveryBottom: require('~/assets/img/delivery-lg_1.png'),
     logoFooter: require('~/assets/img/logo-footer.png'),
+    banner: require('~/assets/img/banner.jpeg'),
 };
 
 export default images;

@@ -1,0 +1,31 @@
+.wrapper {
+    display: flex;
+    padding: 60px 180px;
+    align-items: center;
+
+    &:nth-child(2n) {
+        background-color: #d5d5d5;
+    }
+}
+
+.box-left {
+    width: 40%;
+    padding-right: 80px;
+}
+
+.box-right {
+    width: 60%;
+}
+
+.title {
+    font-family: 'MergeBlack', sans-serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: var(--red-primary);
+    padding-bottom: 10px;
+}
+
+.description {
+    margin-bottom: 25px;
+    line-height: 26px;
+}

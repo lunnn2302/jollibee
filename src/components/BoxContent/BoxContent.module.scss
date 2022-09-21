@@ -1,0 +1,36 @@
+.wrapper {
+    display: block;
+    border: 10px solid var(--white);
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: var(--white);
+    box-shadow: 0px 6px 15px rgb(0 0 0 / 30%);
+    width: 33.333333%;
+    margin: 40px;
+    padding: 10px 10px;
+}
+
+.image {
+    border-radius: 10px 10px 0 0;
+}
+
+.title {
+    margin: 25px 0;
+    text-align: center;
+    font-family: 'MergeBlack', sans-serif;
+    color: var(--red-primary);
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 21px;
+}
+
+.preview-content {
+    overflow: hidden;
+    position: relative;
+    line-height: 2.1rem;
+    max-height: 6.6rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
