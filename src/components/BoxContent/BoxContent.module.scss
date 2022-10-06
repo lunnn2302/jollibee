@@ -1,16 +1,18 @@
 .wrapper {
     display: block;
-    border: 10px solid var(--white);
+    padding: 10px 10px;
+    max-width: 400px;
+    width: 40%;
+    margin: 30px;
     border-radius: 10px;
     box-sizing: border-box;
     background-color: var(--white);
-    box-shadow: 0px 6px 15px rgb(0 0 0 / 30%);
-    width: 33.333333%;
-    margin: 40px;
-    padding: 10px 10px;
+    border: 10px solid var(--white);
+    box-shadow: 0px 2px 6px rgb(0 0 0 / 30%);
 }
 
 .image {
+    width: 1000px;
     border-radius: 10px 10px 0 0;
 }
 
@@ -29,8 +31,23 @@
     overflow: hidden;
     position: relative;
     line-height: 2.1rem;
-    max-height: 6.6rem;
+    max-height: 6rem;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .wrapper {
+        width: auto;
+        margin: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        width: auto;
+        max-width: max-content;
+    }
 }

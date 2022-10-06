@@ -5,7 +5,7 @@ import images from '~/assets/img';
 
 const cx = classNames.bind(styles);
 
-function Banner({ title, img }) {
+function Banner({ title }) {
     return (
         <div className={cx('wrapper')}>
             <img className={cx('banner-img')} src={images.banner} alt="" />

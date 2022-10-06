@@ -9,8 +9,8 @@ const cx = classNames.bind(styles);
 function Footer() {
     return (
         <footer className={cx('wrapper')}>
-            <div className={cx('footer-container', 'flex flex-row')}>
-                <div className=" flex basis-6/12">
+            <div className={cx('footer-container')}>
+                <div className={cx('section-1')}>
                     <div className={cx('footer-logo')}>
                         <img src={images.logoFooter} alt="logo" />
                     </div>
@@ -48,7 +48,7 @@ function Footer() {
                         </p>
                     </div>
                 </div>
-                <div className=" px-16 basis-4/12">
+                <div className={cx('section-2')}>
                     <Link to="/delivery">
                         <img className={cx('delivery-logo')} src={images.deliveryBottom} alt="Delivery Logo" />
                     </Link>
@@ -79,7 +79,7 @@ function Footer() {
                         </li>
                     </ul>
                 </div>
-                <div className=" basis-3/12">
+                <div className={cx('section-3')}>
                     <p className={cx('title')}>Hãy kết nối với chúng tôi</p>
                     <div className={cx('facebook-btn')}>
                         <Button
@@ -99,7 +99,7 @@ function Footer() {
                             <span>E-Mail</span>
                         </Button>
                     </div>
-                    <div>
+                    <div className={cx('logo-bocongthuong')}>
                         <img src={images.bocongthuong} alt="Bộ Công Thương" />
                     </div>
                 </div>

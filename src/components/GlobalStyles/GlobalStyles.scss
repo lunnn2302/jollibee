@@ -15,7 +15,8 @@ footer a {
 
 .logo {
     display: block;
-    margin: 10px auto;
+    margin: 0 auto;
+    padding: 10px 0;
     max-width: 90px;
 }
 
@@ -53,4 +54,16 @@ footer a {
 .indicator.active {
     background-color: #f0810d;
     border: 2px solid var(--white);
+}
+
+@media (max-width: 768px) {
+    .react-slideshow-container + ul.indicators {
+        display: none;
+    }
+}
+
+@media (max-width: 1224px) {
+    .react-slideshow-container + ul.indicators {
+        bottom: 10px;
+    }
 }

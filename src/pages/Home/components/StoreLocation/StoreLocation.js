@@ -5,7 +5,7 @@ import styles from './StoreLocation.module.scss';
 
 const cx = classNames.bind(styles);
 
-function StoreLocation() {
+function StoreLocation({ title }) {
     const [province, setProvince] = useState([]);
     const [district, setDistrict] = useState([]);
     const [provinceResult, setProvinceResult] = useState('Chọn tỉnh thành');
@@ -35,7 +35,7 @@ function StoreLocation() {
 
     return (
         <div className={cx('wrapper')}>
-            <div className={cx('title')}>Tìm cửa hàng</div>
+            <div className={cx('title')}>{title}</div>
             <div className={cx('store-location')}>
                 <select onChange={handleChangeProvince} className={cx('filter')} id="province">
                     <option>Chọn tỉnh thành</option>
@@ -57,10 +57,10 @@ function StoreLocation() {
                         );
                     })}
                 </select>
+                <Button className={cx('submit-btn')} to="/stores" primary>
+                    Tìm Kiếm
+                </Button>
             </div>
-            <Button className={cx('submit-btn')} to="/stores" primary>
-                Tìm Kiếm
-            </Button>
         </div>
     );
 }

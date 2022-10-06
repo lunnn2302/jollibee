@@ -16,7 +16,6 @@
 
 .category-item span {
     font-size: 1.2rem;
-    color: var(--black);
 }
 
 .category-item a {
@@ -37,4 +36,8 @@
     max-width: 120px;
     width: 120px;
     transition: transform 0.3s linear;
+}
+
+.active {
+    color: var(--red-primary);
 }

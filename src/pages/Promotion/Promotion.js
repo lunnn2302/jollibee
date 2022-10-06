@@ -24,7 +24,7 @@ const BLOGS = [
         link: '/',
     },
     {
-        id: 1,
+        id: 3,
         img: promotionImages.blog3,
         title: 'TẢI APP LIỀN TAY -  TẶNG NGAY 01 PHẦN MÌ Ý SỐT BÒ BẰM!!!',
         previewContent: 'TẢI APP LIỀN TAY -  TẶNG NGAY 01 PHẦN MÌ Ý SỐT BÒ BẰM!!!',

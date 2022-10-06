@@ -16,14 +16,14 @@ function HeaderMenu() {
     // const pathName = window.location.pathname.slice(1);
 
     return (
-        <>
+        <div className={cx('wrapper')}>
             <NavLink className={(nav) => cx('menu-item', { active: nav.isActive })} to="/">
                 <p>Trang Chủ</p>
             </NavLink>
             <NavLink className={(nav) => cx('menu-item', { active: nav.isActive })} to="/info">
                 <p>Về Jollibee</p>
             </NavLink>
-            <div className={cx('menu-item-wrap')}>
+            <NavLink className={(nav) => cx('menu-item', { active: nav.isActive })} to="/menu">
                 <Tippy
                     trigger="mouseenter click"
                     interactive
@@ -31,11 +31,9 @@ function HeaderMenu() {
                     offset={[-250, 0]}
                     placement={'bottom-start'}
                 >
-                    <NavLink className={(nav) => cx('menu-item', { active: nav.isActive })} to="/menu">
-                        <p>Thực đơn</p>
-                    </NavLink>
+                    <p>Thực đơn</p>
                 </Tippy>
-            </div>
+            </NavLink>
             <NavLink className={(nav) => cx('menu-item', { active: nav.isActive })} to="/promotion">
                 <p>Khuyến mãi</p>
             </NavLink>
@@ -54,7 +52,7 @@ function HeaderMenu() {
             <NavLink className={(nav) => cx('menu-item', { active: nav.isActive })} to="/recruit">
                 <p>Tuyển dụng</p>
             </NavLink>
-        </>
+        </div>
     );
 }
 

@@ -20,7 +20,9 @@ function Home() {
             <MenuList />
             <Service />
             <Welcome />
-            <StoreLocation />
+            <div className={cx('store-location')}>
+                <StoreLocation title="Tìm cửa hàng" />
+            </div>
         </div>
     );
 }

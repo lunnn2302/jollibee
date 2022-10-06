@@ -1,8 +1,11 @@
+.wrapper {
+    display: flex;
+}
+
 .menu-item {
-    display: inline-block;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin: 0 2px;
     position: static;
     border-radius: 10px 10px 0 0;

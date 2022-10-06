@@ -4,11 +4,14 @@ import './index.css';
 import App from '~/App';
 import reportWebVitals from './reportWebVitals';
 import GlobalStyles from './components/Globalstyles/Globalstyles';
+import { SidebarMenuProvider } from './context/SidebarMenuContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <GlobalStyles>
-        <App />
+        <SidebarMenuProvider>
+            <App />
+        </SidebarMenuProvider>
     </GlobalStyles>,
 );
 

@@ -44,3 +44,7 @@
     width: 120px;
     transition: transform 0.3s linear;
 }
+
+.active span {
+    color: var(--red-primary);
+}

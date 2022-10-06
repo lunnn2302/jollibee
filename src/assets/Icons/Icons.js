@@ -9,7 +9,7 @@ export const HexagonIcon = () => (
         width="212.991px"
         height="30.605px"
         viewBox="0 0 212.991 30.605"
-        enable-background="new 0 0 212.991 30.605"
+        enableBackground="new 0 0 212.991 30.605"
         xmlSpace="preserve"
     >
         <g>
@@ -20,13 +20,13 @@ export const HexagonIcon = () => (
             <line
                 fill="none"
                 stroke="#FFFFFF"
-                stroke-miterlimit="10"
+                strokeMiterlimit="10"
                 x1="146.994"
                 y1="14.781"
                 x2="212.991"
                 y2="14.781"
             />
-            <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="0" y1="14.781" x2="65.999" y2="14.781" />
+            <line fill="none" stroke="#FFFFFF" strokeMiterlimit="10" x1="0" y1="14.781" x2="65.999" y2="14.781" />
         </g>
     </svg>
 );

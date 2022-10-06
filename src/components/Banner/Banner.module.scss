@@ -1,5 +1,6 @@
 .wrapper {
     position: relative;
+    overflow: hidden;
 }
 
 .banner-img {
@@ -12,4 +13,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .pop {
+        width: 100%;
+        height: 100%;
+    }
 }
