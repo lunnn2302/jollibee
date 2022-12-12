@@ -5,13 +5,17 @@ import App from '~/App';
 import reportWebVitals from './reportWebVitals';
 import GlobalStyles from '~/components/GlobalStyles/GlobalStyles';
 import { SidebarMenuProvider } from './context/SidebarMenuContext';
+import { Provider } from 'react-redux';
+import store from './store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <GlobalStyles>
-        <SidebarMenuProvider>
-            <App />
-        </SidebarMenuProvider>
+        <Provider store={store}>
+            <SidebarMenuProvider>
+                <App />
+            </SidebarMenuProvider>
+        </Provider>
     </GlobalStyles>,
 );
 

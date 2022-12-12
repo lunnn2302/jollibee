@@ -7,6 +7,29 @@ import CartButton from './components/CartButton';
 
 const cx = classNames.bind(styles);
 
+const products = [
+    {
+        id: 1,
+        name: '01 MIẾNG GÀ GIÒN VUI VẺ + 1 MỲ Ý SỐT BÒ BẰM + 01 NƯỚC NGỌT (VỪA)',
+        price: 65000,
+    },
+    {
+        id: 2,
+        name: '01 MIẾNG GÀ GIÒN VUI VẺ + 1 MỲ Ý SỐT BÒ BẰM + 01 NƯỚC NGỌT (VỪA)',
+        price: 65000,
+    },
+    {
+        id: 3,
+        name: '01 MIẾNG GÀ GIÒN VUI VẺ + 1 MỲ Ý SỐT BÒ BẰM + 01 NƯỚC NGỌT (VỪA)',
+        price: 65000,
+    },
+    {
+        id: 4,
+        name: '01 MIẾNG GÀ GIÒN VUI VẺ + 1 MỲ Ý SỐT BÒ BẰM + 01 NƯỚC NGỌT (VỪA)',
+        price: 65000,
+    },
+];
+
 function Menu() {
     useEffect(() => {
         document.title = 'Thực Đơn';
@@ -27,11 +50,9 @@ function Menu() {
         <div className={cx('wrapper')}>
             <div className={cx('menu')}>{isStick && <MenuStick />}</div>
             <div className={cx('products')}>
-                <Product />
-                <Product />
-                <Product />
-                <Product />
-                <Product />
+                {products.map((product) => (
+                    <Product key={product.id} id={product.id} name={product.name} price={product.price} />
+                ))}
             </div>
             <CartButton />
         </div>
