@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from '~/App';
 import reportWebVitals from './reportWebVitals';
-import GlobalStyles from './components/Globalstyles/Globalstyles';
+import GlobalStyles from '~/components/GlobalStyles/GlobalStyles';
 import { SidebarMenuProvider } from './context/SidebarMenuContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
