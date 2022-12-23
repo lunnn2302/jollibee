@@ -9,6 +9,7 @@ const routes = {
     contact: '/contact',
     register: '/register',
     recruit: '/recruit',
+    payment: '/thanh-toan',
 };
 
 export default routes;

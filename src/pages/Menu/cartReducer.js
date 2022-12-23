@@ -1,7 +1,8 @@
-import { BUY_PRODUCT, DELETE_PRODUCT } from './constantsAction';
+import { BUY_PRODUCT, DELETE_PRODUCT, INCREASE_PRODUCT } from './constantsAction';
 
 const initialState = {
     cartAr: [],
+    totalPriceProduct: 0,
 };
 
 const cartReducer = (state = initialState, action) => {
@@ -11,25 +12,31 @@ const cartReducer = (state = initialState, action) => {
             if (!productInCart) {
                 return {
                     cartAr: [...state.cartAr, action.payload],
+                    totalPriceProduct: state.totalPriceProduct + action.payload.price,
                 };
             } else {
-                let newcart = state.cartAr;
-                const objIndex = newcart.findIndex((obj) => obj.id === action.payload.id);
-                if (newcart[objIndex].quantity === undefined) {
-                    newcart[objIndex].quantity = 2;
+                let newCart = state.cartAr;
+                const objIndex = newCart.findIndex((obj) => obj.id === action.payload.id);
+                if (newCart[objIndex].quantity === undefined) {
+                    newCart[objIndex].quantity = 2;
                 } else {
-                    newcart[objIndex].quantity = newcart[objIndex].quantity + 1;
+                    newCart[objIndex].quantity = newCart[objIndex].quantity + 1;
                 }
 
-                return { cartAr: [...newcart] };
+                return { cartAr: [...newCart], totalPriceProduct: state.totalPriceProduct + action.payload.price };
             }
         case DELETE_PRODUCT:
-            let newcart = state.cartAr;
-            const objIndex = newcart.findIndex((obj) => obj.id === action.payload.id);
-            newcart.splice(objIndex, 1);
-            console.log('>>newcart', newcart);
-            return { cartAr: [...newcart], totalprice: 0 };
-
+            let newCart = state.cartAr;
+            const objIndex = newCart.findIndex((obj) => obj.id === action.payload.id);
+            if (newCart[objIndex].quantity === undefined) {
+                newCart[objIndex].quantity = 1;
+            }
+            newCart.splice(objIndex, 1);
+            return {
+                cartAr: [...newCart],
+                totalPriceProduct: state.totalPriceProduct - action.payload.price * action.payload.quantity,
+            };
+        case INCREASE_PRODUCT:
         default:
             return state;
     }

@@ -8,23 +8,12 @@ import { connect } from 'react-redux';
 const cx = classNames.bind(styles);
 
 function CartButton(props) {
-    console.log(props.cart);
     return (
-        <div className={cx('wrapper')}>
-            <FontAwesomeIcon icon={faCartShopping} />
-            {props.cart.map((product) => (
-                <div key={product.id}>
-                    <div style={{ width: '30%' }}>{`${product.name}`}</div>
-                    {product.quantity === undefined ? (
-                        <div style={{ width: '40%' }}>{`${product.price}`}</div>
-                    ) : (
-                        <div style={{ width: '40%' }}>{`${product.price}x${product.quantity}`}</div>
-                    )}
-                    <div style={{ width: '5%' }}>
-                        <button onClick={() => props.deleteProduct(product)}>X</button>
-                    </div>
-                </div>
-            ))}
+        <div className={cx('wrapper')} onClick={() => props.setIsOpenCart(!props.isOpenCart)}>
+            <div className={cx('card-icon')}>
+                <FontAwesomeIcon icon={faCartShopping} />
+                <div className={cx('total')}>{props.total !== 0 && props.total}</div>
+            </div>
         </div>
     );
 }
@@ -32,7 +21,7 @@ function CartButton(props) {
 const mapStateToProps = (state) => {
     return {
         cart: state.cart.cartAr,
-        total: state.cart.total,
+        total: state.cart.totalPriceProduct,
     };
 };
 const mapDispatchToProps = (dispatch) => {

@@ -1,5 +1,5 @@
 .wrapper {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 75%;
     text-align: center;
@@ -9,5 +9,18 @@
     padding: 10px;
     width: 100%;
     max-width: 280px;
-    max-height: 51px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'MergeBlack';
+    font-size: 2.6rem;
+}
+
+.total {
+    margin-left: 10px;
 }

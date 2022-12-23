@@ -11,6 +11,7 @@ import Stores from '~/pages/Stores';
 import Contact from '~/pages/Contact';
 import Register from '~/pages/Register';
 import Recruit from '~/pages/Recruit';
+import Payment from '~/pages/Payment';
 
 // Public routes
 export const publicRoutes = [
@@ -24,6 +25,7 @@ export const publicRoutes = [
     { path: config.routes.contact, component: Contact },
     { path: config.routes.register, component: Register },
     { path: config.routes.recruit, component: Recruit },
+    { path: config.routes.payment, component: Payment },
 ];
 
 // Private routes

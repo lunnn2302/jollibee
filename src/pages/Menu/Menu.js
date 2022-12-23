@@ -4,6 +4,8 @@ import MenuStick from './components/MenuStick';
 import { useEffect, useState } from 'react';
 import Product from './components/Product/Product';
 import CartButton from './components/CartButton';
+import Cart from './components/Cart';
+import { connect } from 'react-redux';
 
 const cx = classNames.bind(styles);
 
@@ -30,7 +32,9 @@ const products = [
     },
 ];
 
-function Menu() {
+function Menu(props) {
+    const [isOpenCart, setIsOpenCart] = useState(true);
+
     useEffect(() => {
         document.title = 'Thực Đơn';
     }, []);
@@ -54,9 +58,20 @@ function Menu() {
                     <Product key={product.id} id={product.id} name={product.name} price={product.price} />
                 ))}
             </div>
-            <CartButton />
+            {!isOpenCart ? (
+                <Cart setIsOpenCart={setIsOpenCart} isOpenCart={isOpenCart} />
+            ) : (
+                <CartButton setIsOpenCart={setIsOpenCart} isOpenCart={isOpenCart} />
+            )}
         </div>
     );
 }
 
-export default Menu;
+const mapStateToProps = (state) => {
+    return {
+        cart: state.cart.cartAr,
+        total: state.cart.totalPriceProduct,
+    };
+};
+
+export default connect(mapStateToProps)(Menu);
