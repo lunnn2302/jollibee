@@ -1,23 +1,14 @@
+import { useState } from 'react';
 import SidebarMenu from '~/components/SidebarMenu';
 import Header from './components/Header';
-// import Container from './Container';
 import Footer from './Footer';
-import { SidebarMenuContext } from '~/context/SidebarMenuContext';
-import { useContext } from 'react';
 
 function DefaultLayout({ children }) {
-    const sidebarMenuContext = useContext(SidebarMenuContext);
-
+    const [isOpenSideBar, setIsOpenSideBar] = useState(false);
     return (
-        <div
-            onClick={
-                sidebarMenuContext.sidebarMenu === true
-                    ? sidebarMenuContext.toggleSidebarMenu
-                    : (sidebarMenuContext.sidebarMenu = false)
-            }
-        >
-            <Header />
-            <SidebarMenu />
+        <div>
+            <Header isOpenSideBar={isOpenSideBar} setIsOpenSideBar={setIsOpenSideBar} />
+            <SidebarMenu isOpenSideBar={isOpenSideBar} setIsOpenSideBar={setIsOpenSideBar} />
             <div className="content">{children}</div>
             <Footer />
         </div>

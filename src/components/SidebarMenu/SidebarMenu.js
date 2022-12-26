@@ -2,18 +2,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGoogle, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames/bind';
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProductsMenu from '../ProductsMenu';
 import styles from './SidebarMenu.module.scss';
 import MediaQuery from 'react-responsive';
-import { SidebarMenuContext } from '~/context/SidebarMenuContext';
 
 const cx = classNames.bind(styles);
 
-function SidebarMenu() {
+function SidebarMenu({ isOpenSideBar, setIsOpenSideBar }) {
     const [isOpenMenu, setIsOpenMenu] = useState(false);
-    const sidebarMenuContext = useContext(SidebarMenuContext);
 
     useEffect(() => {
         // setIsOpenMenu(!isOpenMenu);
@@ -21,21 +19,21 @@ function SidebarMenu() {
 
     return (
         <MediaQuery maxWidth={1224}>
-            {sidebarMenuContext.sidebarMenu && (
+            {isOpenSideBar && (
                 <div
                     className={cx('wrapper')}
                     onClick={(e) => {
                         e.stopPropagation();
                     }}
                 >
-                    <div className={cx('close-btn')} onClick={sidebarMenuContext.toggleSidebarMenu}>
+                    <div className={cx('close-btn')} onClick={() => setIsOpenSideBar(!isOpenSideBar)}>
                         <FontAwesomeIcon icon={faXmark} />
                     </div>
                     <div className={cx('lang')}>VN/ENG</div>
-                    <Link className={cx('menu-item')} to="/" onClick={sidebarMenuContext.toggleSidebarMenu}>
+                    <Link className={cx('menu-item')} to="/" onClick={() => setIsOpenSideBar(!isOpenSideBar)}>
                         <p>Trang Chủ</p>
                     </Link>
-                    <Link className={cx('menu-item')} to="/info" onClick={sidebarMenuContext.toggleSidebarMenu}>
+                    <Link className={cx('menu-item')} to="/info" onClick={() => setIsOpenSideBar(!isOpenSideBar)}>
                         <p>Về Jollibee</p>
                     </Link>
                     <div
@@ -45,24 +43,26 @@ function SidebarMenu() {
                         }}
                     >
                         <p>Thực đơn</p>
-                        {isOpenMenu && <ProductsMenu />}
+                        {isOpenMenu && (
+                            <ProductsMenu isOpenSideBar={isOpenSideBar} setIsOpenSideBar={setIsOpenSideBar} />
+                        )}
                     </div>
-                    <Link className={cx('menu-item')} to="/promotion" onClick={sidebarMenuContext.toggleSidebarMenu}>
+                    <Link className={cx('menu-item')} to="/promotion" onClick={() => setIsOpenSideBar(!isOpenSideBar)}>
                         <p>Khuyến mãi</p>
                     </Link>
-                    <Link className={cx('menu-item')} to="/service" onClick={sidebarMenuContext.toggleSidebarMenu}>
+                    <Link className={cx('menu-item')} to="/service" onClick={() => setIsOpenSideBar(!isOpenSideBar)}>
                         <p>Dịch Vụ</p>
                     </Link>
-                    <Link className={cx('menu-item')} to="/news" onClick={sidebarMenuContext.toggleSidebarMenu}>
+                    <Link className={cx('menu-item')} to="/news" onClick={() => setIsOpenSideBar(!isOpenSideBar)}>
                         <p>Tin Tức</p>
                     </Link>
-                    <Link className={cx('menu-item')} to="/stores" onClick={sidebarMenuContext.toggleSidebarMenu}>
+                    <Link className={cx('menu-item')} to="/stores" onClick={() => setIsOpenSideBar(!isOpenSideBar)}>
                         <p>Cửa hàng</p>
                     </Link>
-                    <Link className={cx('menu-item')} to="/contact" onClick={sidebarMenuContext.toggleSidebarMenu}>
+                    <Link className={cx('menu-item')} to="/contact" onClick={() => setIsOpenSideBar(!isOpenSideBar)}>
                         <p>Liên Hệ</p>
                     </Link>
-                    <Link className={cx('menu-item')} to="/recruit" onClick={sidebarMenuContext.toggleSidebarMenu}>
+                    <Link className={cx('menu-item')} to="/recruit" onClick={() => setIsOpenSideBar(!isOpenSideBar)}>
                         <p>Tuyển dụng</p>
                     </Link>
                     <div className={cx('social')}>

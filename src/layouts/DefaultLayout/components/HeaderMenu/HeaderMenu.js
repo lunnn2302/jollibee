@@ -23,7 +23,7 @@ function HeaderMenu() {
             <NavLink className={(nav) => cx('menu-item', { active: nav.isActive })} to="/info">
                 <p>Về Jollibee</p>
             </NavLink>
-            <NavLink className={(nav) => cx('menu-item', { active: nav.isActive })} to="/menu">
+            <NavLink className={(nav) => cx('menu-item', { active: nav.isActive })} to="/menu/ga-ron-vui-ve">
                 <Tippy
                     trigger="mouseenter click"
                     interactive

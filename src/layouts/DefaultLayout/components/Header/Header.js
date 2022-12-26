@@ -5,18 +5,16 @@ import images from '~/assets/img';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 
 import LanguageOptions from '~/components/LanguageOptions';
 import HeaderMenu from '../HeaderMenu';
 import LogInPopUp from '~/components/Button/LogInPopup/';
-import { SidebarMenuContext } from '~/context/SidebarMenuContext';
 
 const cx = classNames.bind(styles);
 
-function Header() {
+function Header({ isOpenSideBar, setIsOpenSideBar }) {
     const [isOpenLogin, setIsOpenLogin] = useState(false);
-    const sidebarMenuContext = useContext(SidebarMenuContext);
 
     const togglePopup = () => {
         setIsOpenLogin(!isOpenLogin);
@@ -52,7 +50,7 @@ function Header() {
 
             <div className={cx('header-content')}>
                 <MediaQuery maxWidth={1224}>
-                    <div className={cx('menu-toggle')} onClick={sidebarMenuContext.toggleSidebarMenu}>
+                    <div className={cx('menu-toggle')} onClick={() => setIsOpenSideBar(!isOpenSideBar)}>
                         <FontAwesomeIcon icon={faBars} />
                     </div>
                 </MediaQuery>

@@ -1,8 +1,6 @@
 import classNames from 'classnames/bind';
-import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import menuListImages from '~/assets/img/MenuList';
-import { SidebarMenuContext } from '~/context/SidebarMenuContext';
 import styles from './ProductsMenu.module.scss';
 
 const cx = classNames.bind(styles);
@@ -16,48 +14,46 @@ const MENU_ITEMS = [
     {
         title: 'Gà giòn vui vẻ',
         img: menuListImages.garonvuive,
-        link: '/',
+        link: '/menu/ga-ron-vui-ve',
     },
     {
         title: 'Mỳ ý sốt bò bằm',
         img: menuListImages.myy,
-        link: '/',
+        link: '/menu/my-y-sot-bo-bam',
     },
     {
         title: 'Gà sốt cay',
         img: menuListImages.gasotcay,
-        link: '/',
+        link: '/menu/ga-sot-cay',
     },
     {
         title: 'Burger',
         img: menuListImages.burger,
-        link: '/',
+        link: '/menu/burger',
     },
     {
         title: 'Phần ăn phụ',
         img: menuListImages.phananphu,
-        link: '/',
+        link: '/menu/phan-an-phu',
     },
     {
         title: 'Món tráng miệng',
         img: menuListImages.trangmieng,
-        link: '/',
+        link: '/menu/mon-trang-mieng',
     },
     {
         title: 'Thức uống',
         img: menuListImages.thucuong,
-        link: '/',
+        link: '/menu/thuc-uong',
     },
 ];
 
-function ProductsMenu() {
-    const sidebarMenuContext = useContext(SidebarMenuContext);
-
+function ProductsMenu({ isOpenSideBar, setIsOpenSideBar }) {
     return (
         <ul className={cx('wrapper')}>
             {MENU_ITEMS.map((item, index) => (
                 <li className={cx('category-item')} key={index}>
-                    <Link className={cx('item-link')} to={item.link} onClick={sidebarMenuContext.toggleSidebarMenu}>
+                    <Link className={cx('item-link')} to={item.link} onClick={() => setIsOpenSideBar(!isOpenSideBar)}>
                         {item.title}
                     </Link>
                 </li>

@@ -9,42 +9,42 @@ const MENU_ITEMS = [
     {
         title: 'Combo bán chạy',
         img: menuListImages.combo,
-        link: '/menu',
+        link: 'combo-ban-chay',
     },
     {
         title: 'Gà giòn vui vẻ',
         img: menuListImages.garonvuive,
-        link: '/',
+        link: 'ga-ron-vui-ve',
     },
     {
         title: 'Mỳ ý sốt bò bằm',
         img: menuListImages.myy,
-        link: '/',
+        link: 'my-y-sot-bo-bam',
     },
     {
         title: 'Gà sốt cay',
         img: menuListImages.gasotcay,
-        link: '/',
+        link: 'ga-sot-cay',
     },
     {
         title: 'Burger',
         img: menuListImages.burger,
-        link: '/',
+        link: 'burger',
     },
     {
         title: 'Phần ăn phụ',
         img: menuListImages.phananphu,
-        link: '/',
+        link: 'phan-an-phu',
     },
     {
         title: 'Món tráng miệng',
         img: menuListImages.trangmieng,
-        link: '/',
+        link: 'mon-trang-mieng',
     },
     {
         title: 'Thức uống',
         img: menuListImages.thucuong,
-        link: '/',
+        link: 'thuc-uong',
     },
 ];
 
@@ -53,7 +53,10 @@ function MenuList() {
         <ul className={cx('wrapper')}>
             {MENU_ITEMS.map((item, index) => (
                 <li className={cx('category-item')} key={index}>
-                    <NavLink className={(nav) => cx({ active: nav.isActive })} to={item.link}>
+                    <NavLink
+                        className={(nav) => cx({ active: nav.isActive })}
+                        to={{ pathname: `/menu/${item.link}`, state: { stateParam: true } }}
+                    >
                         <img className={cx('thumbnail')} src={item.img} alt={item.title} />
                         <span>{item.title}</span>
                     </NavLink>

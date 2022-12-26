@@ -4,7 +4,6 @@ import './index.css';
 import App from '~/App';
 import reportWebVitals from './reportWebVitals';
 import GlobalStyles from '~/components/GlobalStyles/GlobalStyles';
-import { SidebarMenuProvider } from './context/SidebarMenuContext';
 import { Provider } from 'react-redux';
 import store from './store';
 
@@ -12,9 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <GlobalStyles>
         <Provider store={store}>
-            <SidebarMenuProvider>
-                <App />
-            </SidebarMenuProvider>
+            <App />
         </Provider>
     </GlobalStyles>,
 );
