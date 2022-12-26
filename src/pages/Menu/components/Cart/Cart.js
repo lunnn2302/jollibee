@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Cart.module.scss';
-import { deleteProduct, increaseProduct } from '../../actions';
+import { deleteProduct, increaseProduct, decreaseProduct } from '../../actions';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
@@ -18,21 +18,28 @@ function Cart(props) {
             <div className={cx('product-list')}>
                 {props.cart.map((product) => (
                     <div className={cx('product-item')} key={product.id}>
-                        <div className={cx('name')}>{`${product.name}`}</div>
-                        {product.quantity === undefined ? (
-                            <div className={cx('price')}>{`${product.price}`}</div>
-                        ) : (
-                            <div className={cx('price')}>
-                                {product.price} x{' '}
-                                <div className={cx('quantity')}>
-                                    {product.quantity}
-                                    <div onClick={() => props.increaseProduct(product)}>+</div>
+                        <div className={cx('row')}>
+                            <div className={cx('name')}>{`${product.name}`}</div>
+                            <div className={cx('delete-btn')}>
+                                <button onClick={() => props.deleteProduct(product)}>X</button>
+                            </div>
+                        </div>
+
+                        <div className={cx('row')}>
+                            <div className={cx('quantity')}>
+                                <div className={cx('change-quantity')} onClick={() => props.decreaseProduct(product)}>
+                                    -
+                                </div>
+                                <span className={cx('product-quantity')}>
+                                    {product.quantity === undefined ? 1 : product.quantity}
+                                </span>
+                                <div className={cx('change-quantity')} onClick={() => props.increaseProduct(product)}>
+                                    +
                                 </div>
                             </div>
-                        )}
-
-                        <div className={cx('delete-btn')}>
-                            <button onClick={() => props.deleteProduct(product)}>X</button>
+                            <div className={cx('price')}>
+                                {product.quantity === undefined ? product.price : product.price * product.quantity}
+                            </div>
                         </div>
                     </div>
                 ))}
@@ -55,6 +62,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         deleteProduct: (product_current) => dispatch(deleteProduct(product_current)),
         increaseProduct: (product_current) => dispatch(increaseProduct(product_current)),
+        decreaseProduct: (product_current) => dispatch(decreaseProduct(product_current)),
     };
 };
 

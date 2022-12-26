@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Payment.module.scss';
-import { deleteProduct } from '../Menu/actions';
+import { decreaseProduct, deleteProduct, increaseProduct } from '../Menu/actions';
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -31,7 +32,7 @@ function Payment(props) {
                 <div className={cx('cart-header')}>
                     <div className={cx('title', 'col-6')}>TÊN MÓN</div>
                     <div className={cx('title', 'col-3')}>SỐ LƯỢNG</div>
-                    <div className={cx('title', 'col-3')}>ĐƠN GIÁ</div>
+                    <div className={cx('title', 'col-3', 'text-right')}>ĐƠN GIÁ</div>
                 </div>
                 {props.cart.map((product) => (
                     <div className={cx('cart-item')}>
@@ -42,14 +43,33 @@ function Payment(props) {
                             </div>
                         </div>
                         <div className={cx('product-quantity', 'col-3')}>
-                            {product.quantity === undefined ? 1 : product.quantity}
+                            <span className={cx('change-quantity')} onClick={() => props.increaseProduct(product)}>
+                                +
+                            </span>
+                            <input
+                                className={cx('show-order-number')}
+                                type="text"
+                                value={product.quantity === undefined ? 1 : product.quantity}
+                                readOnly
+                            />
+                            <span className={cx('change-quantity')} onClick={() => props.decreaseProduct(product)}>
+                                -
+                            </span>
                         </div>
-                        <div className={cx('product-price', 'col-3')}>{product.price}</div>
+                        <div className={cx('product-price', 'col-3', 'red', 'text-right')}>{product.price}</div>
                     </div>
                 ))}
                 <div className={cx('cart-header')}>
                     <div className={cx('title', 'col-9')}>TỔNG</div>
-                    <div className={cx('title', 'col-3')}>{props.total}</div>
+                    <div className={cx('title', 'col-3', 'red', 'text-right')}>{props.total}</div>
+                </div>
+                <div className={cx('payment')}>
+                    <NavLink className={cx('btn')} to="/menu">
+                        Đặt Thêm
+                    </NavLink>
+                    <button type="submit" to="/thank" className={cx('btn')}>
+                        Thanh Toán
+                    </button>
                 </div>
             </form>
         </div>
@@ -65,6 +85,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         deleteProduct: (product_current) => dispatch(deleteProduct(product_current)),
+        increaseProduct: (product_current) => dispatch(increaseProduct(product_current)),
+        decreaseProduct: (product_current) => dispatch(decreaseProduct(product_current)),
     };
 };
 

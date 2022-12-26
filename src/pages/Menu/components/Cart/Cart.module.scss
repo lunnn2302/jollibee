@@ -24,38 +24,66 @@
 }
 
 .product-item {
-    display: flex;
     align-items: center;
     padding: 8px 0;
     border-bottom: 1px solid #000;
 }
 
+.row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
 .name {
     width: 100%;
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-family: 'MergeBlack';
     overflow: hidden;
     text-overflow: ellipsis;
+    text-transform: uppercase;
 }
 
 .price {
-    width: 100%;
     font-size: 1.4rem;
-    font-family: 'MergeBlack';
+    color: #ce181f;
+    float: right;
+    font-family: 'MergeBlack', sans-serif;
+}
+.quantity {
+    width: 100%;
 }
 
-.quantity {
+.product-quantity {
     display: inline-block;
-    color: red;
+    vertical-align: top;
+    height: 25px;
+    width: 25px;
+    user-select: none;
+    background: white;
+    line-height: 24px;
+    text-align: center;
+}
+
+.change-quantity {
+    display: inline-block;
+    vertical-align: top;
+    height: 25px;
+    width: 25px;
+    user-select: none;
+    text-align: center;
+    cursor: pointer;
 }
 
 .delete-btn {
-    font-family: 'MergeBlack';
-    font-size: 1.6rem;
-    padding: 2px 8px;
-    color: var(--yel-primary);
-    background-color: red;
+    cursor: pointer;
+    background: #c6001d;
     border-radius: 50%;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 1rem;
 }
 
 .total {
