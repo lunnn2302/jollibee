@@ -3,7 +3,7 @@ import imagesMenu from '~/assets/img/Menu';
 import Button from '~/components/Button';
 import styles from './Product.module.scss';
 import { connect } from 'react-redux';
-import { buyProduct } from '~/redux/action/actions';
+import { buyProduct } from '~/redux/action/cartActions';
 
 const cx = classNames.bind(styles);
 

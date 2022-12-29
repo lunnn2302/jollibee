@@ -1,4 +1,4 @@
-import { BUY_PRODUCT, DELETE_PRODUCT, INCREASE_PRODUCT, DECREASE_PRODUCT } from '../action/constantsAction';
+import actionTypes from '../action/actionTypes';
 
 const initialState = {
     cartAr: [],
@@ -10,7 +10,7 @@ const cartReducer = (state = initialState, action) => {
     let newCart = state.cartAr;
     const objIndex = newCart.findIndex((obj) => obj.id === action.payload.id);
     switch (action.type) {
-        case BUY_PRODUCT:
+        case actionTypes.BUY_PRODUCT:
             if (!productInCart) {
                 return {
                     cartAr: [...state.cartAr, action.payload],
@@ -27,7 +27,7 @@ const cartReducer = (state = initialState, action) => {
 
                 return { cartAr: [...newCart], totalPriceProduct: state.totalPriceProduct + action.payload.price };
             }
-        case DELETE_PRODUCT:
+        case actionTypes.DELETE_PRODUCT:
             if (newCart[objIndex].quantity === undefined) {
                 newCart[objIndex].quantity = 1;
             }
@@ -36,7 +36,7 @@ const cartReducer = (state = initialState, action) => {
                 cartAr: [...newCart],
                 totalPriceProduct: state.totalPriceProduct - action.payload.price * action.payload.quantity,
             };
-        case INCREASE_PRODUCT:
+        case actionTypes.INCREASE_PRODUCT:
             if (productInCart) {
                 if (newCart[objIndex].quantity === undefined) {
                     newCart[objIndex].quantity = 2;
@@ -48,7 +48,7 @@ const cartReducer = (state = initialState, action) => {
                 cartAr: [...newCart],
                 totalPriceProduct: state.totalPriceProduct + action.payload.price,
             };
-        case DECREASE_PRODUCT:
+        case actionTypes.DECREASE_PRODUCT:
             if (productInCart && newCart[objIndex].quantity > 1) {
                 newCart[objIndex].quantity--;
             } else {

@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Cart.module.scss';
-import { deleteProduct, increaseProduct, decreaseProduct } from '~/redux/action/actions';
+import { deleteProduct, increaseProduct, decreaseProduct } from '~/redux/action';
 import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
