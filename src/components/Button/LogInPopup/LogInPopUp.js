@@ -1,6 +1,7 @@
 import { faSquareFacebook } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import images from '~/assets/img';
 import Button from '~/components/Button';
@@ -8,10 +9,13 @@ import styles from './LogInPopUp.module.scss';
 
 const cx = classNames.bind(styles);
 
-function LogInPopUp({ togglePopup }) {
+function LogInPopUp({ togglePopup, login }) {
+    const [accountName, setAccountName] = useState('');
+    const [password, setPassword] = useState('');
+
     return (
         <div className={cx('pop-up')}>
-            <div className={cx('wrapper')}>
+            <form onSubmit={() => login({ accountName, password })} className={cx('wrapper')}>
                 <Button onClick={() => togglePopup()} className={cx('close-btn')} rounded primary>
                     X
                 </Button>
@@ -19,8 +23,20 @@ function LogInPopUp({ togglePopup }) {
                     <img className={cx('logo')} src={images.logo} alt="" />
                     <span className={cx('title')}>Vui lòng đăng nhập </span>
                     <fieldset className={cx('login-form')}>
-                        <input className={cx('input')} type="text" placeholder="Email/ Số điện thoại"></input>
-                        <input className={cx('input')} type="password" placeholder="Mật khẩu"></input>
+                        <input
+                            className={cx('input')}
+                            value={accountName}
+                            onChange={(e) => setAccountName(e.target.value)}
+                            type="text"
+                            placeholder="Email/ Số điện thoại"
+                        ></input>
+                        <input
+                            className={cx('input')}
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            type="password"
+                            placeholder="Mật khẩu"
+                        ></input>
                         <Link to="/forget-password" className={cx('forgot-pass')}>
                             Quên mật khẩu?
                         </Link>
@@ -41,7 +57,7 @@ function LogInPopUp({ togglePopup }) {
                         <Link to="/register"> Đăng ký ngay</Link>
                     </div>
                 </footer>
-            </div>
+            </form>
         </div>
     );
 }

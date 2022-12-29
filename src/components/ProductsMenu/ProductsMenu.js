@@ -9,7 +9,7 @@ const MENU_ITEMS = [
     {
         title: 'Combo bán chạy',
         img: menuListImages.combo,
-        link: '/menu',
+        link: '/menu/combo-ban-chay',
     },
     {
         title: 'Gà giòn vui vẻ',

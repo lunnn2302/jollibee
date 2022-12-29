@@ -2,7 +2,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import styles from './CartButton.module.scss';
-import { deleteProduct } from '../../actions';
+import { deleteProduct } from '~/redux/action/actions';
 import { connect } from 'react-redux';
 
 const cx = classNames.bind(styles);

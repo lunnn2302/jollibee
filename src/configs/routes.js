@@ -1,7 +1,7 @@
 const routes = {
     home: '/',
     info: '/info',
-    menu: '/menu/:props',
+    menu: '/menu/:params',
     promotion: '/promotion',
     service: '/service',
     news: '/news',

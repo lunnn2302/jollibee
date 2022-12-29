@@ -37,7 +37,7 @@ function BannerSlide() {
                     </div>
                 ))}
             </Slide>
-            <Link className={cx('order-btn')} to="/menu">
+            <Link className={cx('order-btn')} to="/menu/ga-ron-vui-ve">
                 Đặt Hàng
             </Link>
         </div>

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import classNames from 'classnames/bind';
 import styles from './Payment.module.scss';
-import { decreaseProduct, deleteProduct, increaseProduct } from '../Menu/actions';
+import { decreaseProduct, deleteProduct, increaseProduct } from '~/redux/action/actions';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
