@@ -6,16 +6,21 @@ import { Link } from 'react-router-dom';
 import images from '~/assets/img';
 import Button from '~/components/Button';
 import styles from './LogInPopUp.module.scss';
+import { userService, adminService } from '~/services';
+import { connect } from 'react-redux';
+import * as actions from '~/redux/action';
 
 const cx = classNames.bind(styles);
 
-function LogInPopUp({ togglePopup, login }) {
+function LogInPopUp({ togglePopup }) {
     const [accountName, setAccountName] = useState('');
     const [password, setPassword] = useState('');
-
+    const handleLogin = () => {
+        console.log(accountName, password);
+    };
     return (
         <div className={cx('pop-up')}>
-            <form onSubmit={() => login({ accountName, password })} className={cx('wrapper')}>
+            <form className={cx('wrapper')}>
                 <Button onClick={() => togglePopup()} className={cx('close-btn')} rounded primary>
                     X
                 </Button>
@@ -43,7 +48,7 @@ function LogInPopUp({ togglePopup, login }) {
                     </fieldset>
                 </header>
                 <footer className={cx('footer-login')}>
-                    <Button className="mt-20" primary large>
+                    <Button className="mt-20" primary large onClick={() => handleLogin()}>
                         Đăng nhập
                     </Button>
                     <Button className="mt-20" blueBtn large leftIcon={<FontAwesomeIcon icon={faSquareFacebook} />}>
@@ -62,4 +67,15 @@ function LogInPopUp({ togglePopup, login }) {
     );
 }
 
-export default LogInPopUp;
+const mapStateToProps = (state) => {
+    return {};
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        userLoginSuccess: (userInfo) => dispatch(actions.userLoginSuccess(userInfo)),
+        userLoginFail: () => dispatch(actions.userLoginFail()),
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LogInPopUp);

@@ -9,7 +9,6 @@ import { NavLink } from 'react-router-dom';
 const cx = classNames.bind(styles);
 
 function Cart(props) {
-    console.log(props);
     return (
         <div className={cx('wrapper')}>
             <div className={cx('minimize')} onClick={() => props.setIsOpenCart(!props.isOpenCart)}>
@@ -21,7 +20,14 @@ function Cart(props) {
                         <div className={cx('row')}>
                             <div className={cx('name')}>{`${product.name}`}</div>
                             <div className={cx('delete-btn')}>
-                                <button onClick={() => props.deleteProduct(product)}>X</button>
+                                <button
+                                    onClick={() => {
+                                        console.log(props);
+                                        props.deleteProduct(product);
+                                    }}
+                                >
+                                    X
+                                </button>
                             </div>
                         </div>
 
